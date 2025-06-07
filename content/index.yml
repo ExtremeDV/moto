@@ -37,29 +37,36 @@ about:
   description: |
     Мы — маленькая семейная мотошкола. Мы заинтересованы , чтобы люди уезжали от нас с хорошим настроением и рекомендовали нас своим друзьям и знакомым. Все занятия веду я. Большинство наших учеников сдают экзамен с первого раза.
 experience:
-  title: Work Experience
+  title: 'В нашей школе:'
   items:
-    - position: "Brand Designer at"
-      date: "2023 - Present"
+    - position: "Сдают экзамен в ГИБДД с первого раза"
+      date: "95 из 100"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
+        name: ''
+        logo: "material-symbols:sports-motorsports-outline"
+        url: ""
         color: "#00DC82"
-    - position: "Assets Designer at"
-      date: "2022 - 2023"
+    - position: "Переобучение за 1 месяц с «В» на «А»"
+      date: "29000 руб."
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
-        url: "https://raycast.com"
+        name: ''
+        logo: "ic:round-motorcycle"
+        url: ""
         color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
-      date: "2020 - 2021"
+    - position: "Разовое занятие"
+      date: "3000 руб."
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
-        url: "https://linear.app"
+        name: ''
+        logo: "streamline:class-lesson"
+        url: ""
         color: "#5E6AD2"
+    - position: "Рассрочка платежа"
+      date: "15000 + 14000"
+      company:
+        name: ''
+        logo: "material-symbols:credit-card-clock-outline"
+        url: ""
+        color: "#00DC82"
 testimonials:
   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
     author:
