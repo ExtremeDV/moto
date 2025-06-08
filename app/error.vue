@@ -10,13 +10,13 @@ defineProps({
 
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: 'ru'
   }
 })
 
 useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  title: 'Страница не найдена',
+  description: 'Извините, но эта страница не может быть найдена.'
 })
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
@@ -45,7 +45,17 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     <UMain>
       <UContainer>
         <UPage>
-          <UError :error="error" />
+          <UError 
+          :error="{
+            statusCode: 404,
+            statusMessage: 'Страница не найдена',
+            fatal: true,
+            message: 'Извините, но эта страница не может быть найдена.'
+          }"
+          :clear="{
+          icon: 'i-lucide-arrow-left',
+          label: 'Вернуться на главную'}"
+          />
         </UPage>
       </UContainer>
     </UMain>

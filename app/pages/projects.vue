@@ -46,10 +46,6 @@ useSeoMeta({
             :to="global.meetingLink"
             v-bind="page.links[0]"
           />
-          <UButton
-            :to="`mailto:${global.email}`"
-            v-bind="page.links[1]"
-          />
         </div>
       </template>
     </UPageHero>
@@ -80,7 +76,7 @@ useSeoMeta({
         >
           <template #leading>
             <span class="text-sm text-muted">
-              {{ new Date(project.date).getFullYear() }}
+              {{ (new Date(project.date).getFullYear())}}
             </span>
           </template>
           <template #footer>

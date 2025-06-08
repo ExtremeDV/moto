@@ -1,13 +1,18 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: '/images/fox-dark.png',
-      light: '/images/fox-light.png',
-      alt: 'My profile picture'
+      dark: '/images/fox.png',
+      light: '/images/fox.png',
+      alt: 'Fox picture'
     },
     meetingLink: 'https://cal.com/',
-    email: 'ui-pro@nuxt.com',
+    email: 'info.polyakovva@gmail.com',
     available: true
+  },
+  toaster: {
+    position: 'top-right' as const,
+    expand: true,
+    duration: 5000
   },
   ui: {
     colors: {

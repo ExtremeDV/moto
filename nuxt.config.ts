@@ -10,6 +10,15 @@ export default defineNuxtConfig({
     'motion-v/nuxt'
   ],
 
+  app: {
+    head: {
+      title: 'Школамото.рф', // default fallback title
+      htmlAttrs: {
+        lang: 'ru',
+      }
+    }
+  },
+
   devtools: {
     enabled: true
   },

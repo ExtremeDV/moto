@@ -9,7 +9,7 @@ const { data: posts } = await useAsyncData('index-blogs', () =>
   queryCollection('blog').order('date', 'DESC').limit(3).all()
 )
 if (!posts.value) {
-  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Нет постов для отображения', fatal: true })
 }
 </script>
 
@@ -45,7 +45,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            label="Читать далее"
           >
             <template #trailing>
               <UIcon
