@@ -15,7 +15,7 @@ const { data: posts } = await useAsyncData('blogs', () =>
 if (!posts.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'blogs posts not found',
+    statusMessage: 'Публикации не найдены',
     fatal: true
   })
 }

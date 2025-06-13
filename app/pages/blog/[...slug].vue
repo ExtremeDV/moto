@@ -7,7 +7,7 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
 )
-if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Страница не найдена', fatal: true })
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('blog', route.path, {
     fields: ['description']
@@ -42,7 +42,7 @@ useSeoMeta({
 const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: Date) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString('ru-RU', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
@@ -59,7 +59,7 @@ const formatDate = (dateString: Date) => {
           class="text-sm flex items-center gap-1"
         >
           <UIcon name="lucide:chevron-left" />
-          Blog
+          Блог
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
           <div class="flex text-xs text-muted items-center justify-center gap-2">
@@ -70,7 +70,7 @@ const formatDate = (dateString: Date) => {
               -
             </span>
             <span v-if="page.minRead">
-              {{ page.minRead }} MIN READ
+              {{ page.minRead }} мин. чтения
             </span>
           </div>
           <NuxtImg
@@ -105,7 +105,7 @@ const formatDate = (dateString: Date) => {
               size="sm"
               variant="link"
               color="neutral"
-              label="Copy link"
+              label="Копировать ссылку"
               @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
             />
           </div>
