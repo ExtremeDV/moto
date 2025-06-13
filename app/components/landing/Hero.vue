@@ -34,7 +34,7 @@ defineProps<{
         }"
       >
         <UColorModeImage
-          class="size-48"
+          class="size-[250px]"
           :light="global.picture?.light!"
           :dark="global.picture?.dark!"
           :alt="global.picture?.alt!"
