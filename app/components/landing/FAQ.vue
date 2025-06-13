@@ -42,8 +42,11 @@ const ui = {
       :ui
     >
       <template #content="{ item }">
-        <div>
+        <div class="my-4 text-sm sm:text-md lg:text-sm text-muted">
           {{ item.description }}
+        </div>
+        <div class="my-2">
+         Стоимость: {{ item.price ? `${item.price} руб.` : 'Бесплатно' }} 
         </div>
         <UPageAccordion
           trailing-icon="lucide:plus"
