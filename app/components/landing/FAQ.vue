@@ -10,6 +10,8 @@ const items = computed(() => {
     return {
       label: faq.title,
       key: faq.title.toLowerCase(),
+      description: faq.description,
+      price: faq.price,
       questions: faq.questions
     }
   })
@@ -40,6 +42,9 @@ const ui = {
       :ui
     >
       <template #content="{ item }">
+        <div>
+          {{ item.description }}
+        </div>
         <UPageAccordion
           trailing-icon="lucide:plus"
           :items="item.questions"

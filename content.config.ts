@@ -63,6 +63,8 @@ export default defineContentConfig({
           categories: z.array(
             z.object({
               title: z.string().nonempty(),
+              description: z.string().nonempty(),
+              price: z.string().nonempty(),
               questions: z.array(
                 z.object({
                   label: z.string().nonempty(),

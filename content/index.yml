@@ -88,6 +88,9 @@ faq:
   description: Answers to common questions about my process and services.
   categories:
     - title: Services & Process
+      description: |
+        Here are some common questions about the services I offer, my design process, and how I work with clients.
+      price: 0
       questions:
         - label: What services do you offer?
           content: |
@@ -99,6 +102,9 @@ faq:
           content: |
             Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
     - title: Pricing & Timelines
+      description: |
+        Here are some common questions about my pricing structure, payment terms, and project timelines.
+      price: 0
       questions:
         - label: How much does a project typically cost?
           content: |
@@ -113,6 +119,9 @@ faq:
           content: |
             Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
     - title: About Me
+      description: |
+        Here are some common questions about my background, experience, and personal interests.
+      price: 0
       questions:
         - label: What do you enjoy most about your work?
           content: |
