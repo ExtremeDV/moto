@@ -6,7 +6,7 @@ description: Обучаем категории «А» на площадке ГИ
 hero:
   links:
     - label: записаться на обучение
-      to: https://github.com/nuxt-ui-pro/portfolio
+      to: /
       color: primary
   images:
     - src: /images/slider/001.jpg
@@ -84,7 +84,7 @@ blog:
   title: Интересные статьи
   description: Читаем полезные статьи о мотошколе, обучении и безопасности на дороге
 faq:
-  title: Курсы и ответы на вопросы
+  title: Курсы и ответы на частые вопросы
   description: Выбирай подходящий для тебя курс
   categories:
     - title: Краткий курс
