@@ -111,9 +111,6 @@ defineProps<{
 
       <div class="gap-x-4 inline-flex mt-4">
         <Motion
-          v-for="(link, index) of footer?.links"
-          :key="index"
-
           :initial="{
             scale: 1.1,
             opacity: 0,
@@ -126,12 +123,13 @@ defineProps<{
           }"
           :transition="{
             duration: 0.6,
-            delay: 0.5 + index * 0.1
+            delay: 0.5
           }"
         >
-          <UButton
+        <p class="text-2xl">(903) 898-09-09</p>
+          <!-- <UButton
             v-bind="{ size: 'md', color: 'neutral', variant: 'ghost', ...link }"
-          />
+          /> -->
         </Motion>
       </div>
     </template>

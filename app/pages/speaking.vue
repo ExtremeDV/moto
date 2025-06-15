@@ -69,60 +69,7 @@ function formatDate(dateString: Date): string {
         container: '!pt-0'
       }"
     >
-      <div
-        v-for="(eventsInCategory, category) in groupedEvents"
-        :key="category"
-        class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 mb-16 last:mb-0"
-      >
-        <div class="lg:col-span-1 mb-4 lg:mb-0">
-          <h2
-            class="lg:sticky lg:top-16 text-xl font-semibold tracking-tight text-highlighted"
-          >
-            {{ category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase()) }}s
-          </h2>
-        </div>
-
-        <div class="lg:col-span-2 space-y-8">
-          <div
-            v-for="(event, index) in eventsInCategory"
-            :key="`${category}-${index}`"
-            class="group relative pl-6 border-l border-default"
-          >
-            <NuxtLink
-              v-if="event.url"
-              :to="event.url"
-              class="absolute inset-0"
-            />
-            <div class="mb-1 text-sm font-medium text-muted">
-              <span>{{ event.location }}</span>
-              <span
-                v-if="event.location && event.date"
-                class="mx-1"
-              >·</span>
-              <span v-if="event.date">{{ formatDate(event.date) }}</span>
-            </div>
-
-            <h3 class="text-lg font-semibold text-highlighted">
-              {{ event.title }}
-            </h3>
-
-            <UButton
-              v-if="event.url"
-              target="_blank"
-              :label="event.category === 'Podcast' ? 'Listen' : 'Watch'"
-              variant="link"
-              class="p-0 pt-2 gap-0"
-            >
-              <template #trailing>
-                <UIcon
-                  name="i-lucide-arrow-right"
-                  class="size-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-                />
-              </template>
-            </UButton>
-          </div>
-        </div>
-      </div>
+    <iframe frameborder="0" width="100%" height="1840px" marginwidth="0" marginheight="0" vspace="0" hspace="0" src="//www.pdd24.com/for-school"></iframe>
     </UPageSection>
   </UPage>
 </template>

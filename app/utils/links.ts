@@ -13,11 +13,11 @@ export const navLinks: NavigationMenuItem[] = [{
   icon: 'i-lucide-file-text',
   to: '/blog'
 }, {
-  label: 'Галерея',
+  label: 'Билеты ПДД',
   icon: 'i-lucide-mic',
   to: '/speaking'
 }, {
-  label: 'Контакты',
+  label: 'О нас',
   icon: 'i-lucide-user',
   to: '/about'
 }]
