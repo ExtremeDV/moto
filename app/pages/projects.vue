@@ -80,16 +80,16 @@ useSeoMeta({
             </span>
           </template>
           <template #footer>
-            <ULink
+            <!-- <ULink
               :to="project.url"
               class="text-sm text-primary flex items-center"
-            >
-              Подробнее
+            > -->
+              <!-- Подробнее
               <UIcon
                 name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
               />
-            </ULink>
+            </ULink> -->
           </template>
           <img
             :src="project.image"
