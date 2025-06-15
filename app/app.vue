@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ru } from '@nuxt/ui-pro/locale'
+  import { ru } from '@nuxt/ui-pro/locale'
+
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'gray')
