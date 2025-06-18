@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { footer } = useAppConfig()
+const { footer, global } = useAppConfig()
 </script>
 
 <template>
@@ -7,6 +7,16 @@ const { footer } = useAppConfig()
     class="z-10 bg-default"
     :ui="{ left: 'text-xs' }"
   >
+
+    <template #top>
+      <div
+          v-if="global.links"
+          class="flex items-center gap-2"
+        >
+          <Booking/>
+        </div>
+    </template>
+
     <template #left>
       {{ footer.credits }}
     </template>

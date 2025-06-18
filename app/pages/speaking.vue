@@ -56,7 +56,9 @@ function formatDate(dateString: Date): string {
         links: 'justify-start'
       }"
     >
+    <template #default>
+      <iframe title="Экзамен ПДД онлайн" src="https://xn----7sbnackuskv0m.xn--p1ai/" scrolling="yes" border=0 style="background-color:white; margin-bottom: 30px; display: block; border-radius:20px; box-shadow: 0 0px 30px rgba(0, 0, 0, 0.4); border: 2px solid #313131;" class="w-full min-h-[680px] scale-[90%]"></iframe>
+    </template>
     </UPageHero>
-    <iframe title="Экзамен ПДД онлайн" src="https://xn----7sbnackuskv0m.xn--p1ai/" scrolling="yes" border=0 style="background-color:white; margin-bottom: 30px; margin-top: 30px; display: block; border-radius:20px; box-shadow: 0 0px 30px rgba(0, 0, 0, 0.4); border: 2px solid #212121;" class="w-full min-h-[680px] scale-[90%]"></iframe>
   </UPage>
 </template>

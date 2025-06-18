@@ -7,7 +7,15 @@ export default defineAppConfig({
     },
     meetingLink: 'https://cal.com/',
     email: 'info.polyakovva@gmail.com',
-    available: true
+    available: true,
+    address_class: '',
+    address_area: '',
+    phone: '',
+    booking: {
+      label: 'Записаться на обучение',
+      to: '/',
+      color: 'neutral'
+    }
   },
   toaster: {
     position: 'top-right' as const,
@@ -30,7 +38,7 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `Copyright © ${new Date().getFullYear()}`,
+    credits: `Copyright © 2013 - ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-nuxtdotjs',

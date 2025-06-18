@@ -1,4 +1,5 @@
 import { field, group } from '@nuxt/content/preview'
+import { color } from 'motion-v'
 
 export default defineNuxtSchema({
   appConfig: {
@@ -7,6 +8,56 @@ export default defineNuxtSchema({
       description: 'Global website configuration',
       icon: 'lucide:settings',
       fields: {
+        booking: group({
+          title: 'Booking',
+          description: 'Booking configuration.',
+          icon: 'lucide:calendar',
+          fields: {
+            label: field({
+              type: 'string',
+              title: 'Label',
+              description: 'Link label.',
+              default: 'Button of booing',
+              icon: 'lucide:link',
+            }),
+            to: field({
+              type: 'string',
+              title: 'To',
+              description: 'Link URL.',
+              icon: 'lucide:link',
+              default: '/'
+            }),
+            color: field({
+              type: 'string',
+              title: 'Color',
+              description: 'Link color.',
+              icon: 'lucide:palette',
+              default: 'primary',
+              required: ['primary', 'secondary', 'tertiary', 'success', 'warning', 'error', 'info']
+            }),
+          }
+        }),
+        address_class: field({
+          type: 'string',
+          title: 'Address Class',
+          description: 'Your address class.',
+          icon: 'lucide:map-pin',
+          default: 'Podolsk, Moscow region, Russia'
+        }),
+        address_area: field({
+          type: 'string',
+          title: 'Address Area',
+          description: 'Your address area.',
+          icon: 'lucide:map-pin',
+          default: 'Podolsk, Moscow region, Russia'
+        }),
+        phone: field({
+          type: 'string',
+          title: 'Phone',
+          description: 'Your phone number.',
+          icon: 'lucide:phone',
+          default: '+7 (999) 999-99-99'
+        }),
         meetingLink: field({
           type: 'string',
           title: 'Meeting link',
