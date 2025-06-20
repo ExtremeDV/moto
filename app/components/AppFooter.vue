@@ -8,13 +8,27 @@ const { footer, global } = useAppConfig()
     :ui="{ left: 'text-xs' }"
   >
 
-    <template #top>
-      <div
-          v-if="global.links"
-          class="flex items-center gap-2"
+    <template #top class="flex flex-col items-center justify-center gap-2">
+      <div class="text-2xl font-semibold text-center my-5">
+        Наши контакты:
+      </div>
+      <UPageGrid>
+        <UPageCard
+        title="Теоритический класс"
+        :description="global.address_class"
+        />
+        <UPageCard
+        title="Мотодром"
+        :description="global.address_area"
+        />
+        <UPageCard
+        class="lg:col-span-1 sm:col-span-2"
         >
-          <Booking/>
-        </div>
+          <template #default>
+            <Booking/>
+          </template>
+        </UPageCard>
+      </UPageGrid>
     </template>
 
     <template #left>

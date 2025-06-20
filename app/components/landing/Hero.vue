@@ -126,10 +126,6 @@ defineProps<{
             delay: 0.5
           }"
         >
-        <p class="text-2xl">(903) 898-09-09</p>
-          <!-- <UButton
-            v-bind="{ size: 'md', color: 'neutral', variant: 'ghost', ...link }"
-          /> -->
         </Motion>
       </div>
     </template>

@@ -8,13 +8,13 @@ export default defineAppConfig({
     meetingLink: 'https://cal.com/',
     email: 'info.polyakovva@gmail.com',
     available: true,
-    address_class: '',
-    address_area: '',
-    phone: '',
+    address_class: 'г. Подольск, ул. Литейная, д. 34/2',
+    address_area: 'г. Подольск, мкр. Кутузово, ул. Станционная, д. 21 (площадка ГАИ)',
+    phone: '8(926)255-55-12',
     booking: {
       label: 'Записаться на обучение',
       to: '/',
-      color: 'neutral'
+      color: 'primary'
     }
   },
   toaster: {
