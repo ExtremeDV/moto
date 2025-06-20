@@ -14,7 +14,7 @@ const { footer, global } = useAppConfig()
       </div>
       <UPageGrid>
         <UPageCard
-        title="Теоритический класс"
+        title="Теоретический класс"
         :description="global.address_class"
         />
         <UPageCard
