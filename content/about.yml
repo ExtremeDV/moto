@@ -1,5 +1,5 @@
-title: About Me
-description: Learn more about my journey as a Boston-based UX/UI Designer & Front-End Developer, my design philosophy, and my passion for crafting intuitive digital experiences.
+title: О нас
+description: ''
 content: |
   Почему человек садится на мотоцикл? Для кого-то это способ самовыражения, для кого-то давняя детская мечта, а для кого-то просто способ добраться на работу минуя пробки… Не важно. Главное, чтобы для Вас это был сплошной позитив и безграничное удовольствие.
 
@@ -27,7 +27,7 @@ content: |
 
   Приходите к нам всей семьёй, у нас никому не будет скучно
 images:
-  - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My coffee workspace
-  - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My trip to Tokyo
+  - src: /images/slider/010.jpg
+    alt: ''
+  - src: /images/slider/007.jpg
+    alt: ''
