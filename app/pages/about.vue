@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { UColorModeImage } from '#components'
+
 const { data: page } = await useAsyncData('about', () => {
   return queryCollection('about').first()
 })
@@ -33,7 +35,7 @@ useSeoMeta({
         links: 'justify-start'
       }"
     >
-      <UColorModeAvatar
+      <UColorModeImage
         class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
         :light="global.picture?.light!"
         :dark="global.picture?.dark!"
