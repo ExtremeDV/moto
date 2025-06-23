@@ -26,6 +26,14 @@ export default defineAppConfig({
     colors: {
       primary: 'orange',
       neutral: 'stone'
+    },
+
+    icons: {
+      external: 'i-material-symbols-arrows-more-up',
+      search: 'i-material-symbols-search',
+      dark: 'i-material-symbols-moon-stars-outline-rounded',
+      light: 'i-material-symbols-wb-sunny-outline',
+      chevron: 'i-material-symbols-close'
     }
   },
   icon: {
