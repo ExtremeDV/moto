@@ -128,6 +128,21 @@ export default defineContentConfig({
         content: z.object({}),
         images: z.array(createImageSchema())
       })
+    }),
+    gallery: defineCollection({
+      type: 'page',
+      source: 'gallery.yml',
+      schema: z.object({
+        images: z.array(createImageSchema())
+      })
+    }),
+    services: defineCollection({
+      type: 'page',
+      source: 'services.md',
+      schema: z.object({
+        title: z.string(),
+        description: z.string()
+        })
     })
   }
 })
