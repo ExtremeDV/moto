@@ -32,5 +32,6 @@ useSeoMeta({
     <LandingBlog :page />
     <LandingProjects :page />
     <LandingFAQ :page />
+    <Gallery />
   </UPage>
 </template>
