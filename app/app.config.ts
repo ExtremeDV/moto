@@ -28,6 +28,10 @@ export default defineAppConfig({
       neutral: 'stone'
     }
   },
+  icon: {
+    mode: 'css',
+    cssLayer: 'base'
+  },
   uiPro: {
     pageHero: {
       slots: {
