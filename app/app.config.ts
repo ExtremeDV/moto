@@ -29,8 +29,8 @@ export default defineAppConfig({
     },
 
     icons: {
-      dark: 'i-line-md-moon',
-      light: 'i-line-md-sun-rising-loop'
+      dark: 'i-lucide-moon',
+      light: 'i-lucide-sun'
     }
   },
 
