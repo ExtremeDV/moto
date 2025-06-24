@@ -13,11 +13,9 @@ export default defineNuxtConfig({
   ssr: true,
 
   icon: {
-    clientBundle: {
-      scan: true, // Автоматическое сканирование иконок в проекте
-      sizeLimitKb: 256 // Лимит размера бандла иконок
-    },
+    serverBundle: 'local',
   },
+
 
   app: {
     head: {
