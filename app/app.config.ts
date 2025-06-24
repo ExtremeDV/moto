@@ -26,6 +26,11 @@ export default defineAppConfig({
     colors: {
       primary: 'orange',
       neutral: 'stone'
+    },
+
+    icons: {
+      dark: 'i-lucide-moon',
+      light: 'i-lucide-sun'
     }
   },
   icon: {
