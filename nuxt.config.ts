@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 
   icon: {
     serverBundle: 'local',
+    collections: ['lucide']
   },
 
   app: {
