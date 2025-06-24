@@ -3,6 +3,8 @@ const colorMode = useColorMode()
 
 const nextTheme = computed(() => (colorMode.value === 'dark' ? 'light' : 'dark'))
 
+const { ui } = useAppConfig()
+
 const switchTheme = () => {
   colorMode.preference = nextTheme.value
 }
@@ -47,7 +49,7 @@ const startViewTransition = (event: MouseEvent) => {
   <ClientOnly>
     <UButton
       :aria-label="`Перейти на ${nextTheme} тему`"
-      :icon="`i-lucide-${nextTheme === 'dark' ? 'sun' : 'moon'}`"
+      :icon="nextTheme === 'dark' ? ui.icons?.light : ui.icons?.dark"
       color="neutral"
       variant="ghost"
       size="sm"
