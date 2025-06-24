@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   icon: {
-    serverBundle: 'local',
+    serverBundle: 'remote',
   },
 
 
