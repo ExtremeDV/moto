@@ -10,12 +10,14 @@ export default defineNuxtConfig({
     'motion-v/nuxt'
   ],
 
-  ssr: true,
-
   icon: {
-    serverBundle: {
-      remote: 'jsdelivr', // 'unpkg' or 'github-raw', or a custom function
-    }
+    clientBundle: {
+      scan: {
+        // note that when you specify those values, the default behavior will be overridden
+        globInclude: ['components/**/*.vue', /* ... */],
+        globExclude: ['node_modules', 'dist', /* ... */],
+      },
+    },
   },
 
   app: {
