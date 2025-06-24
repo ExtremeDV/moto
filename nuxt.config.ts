@@ -13,8 +13,9 @@ export default defineNuxtConfig({
   ssr: true,
 
   icon: {
-    serverBundle: 'local',
-    collections: ['lucide']
+    serverBundle: {
+      remote: 'jsdelivr', // 'unpkg' or 'github-raw', or a custom function
+    }
   },
 
   app: {
