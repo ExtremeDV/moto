@@ -33,10 +33,7 @@ export default defineAppConfig({
       light: 'i-line-md-sun-rising-loop'
     }
   },
-  icon: {
-    mode: 'css',
-    cssLayer: 'base'
-  },
+
   uiPro: {
     pageHero: {
       slots: {

@@ -55,7 +55,7 @@ const startViewTransition = (event: MouseEvent) => {
       size="sm"
       class="rounded-full"
       @click="startViewTransition"
-    />{{ nextTheme }}
+    />
     <template #fallback>
       <div class="size-4" />
     </template>

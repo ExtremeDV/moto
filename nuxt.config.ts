@@ -13,10 +13,13 @@ export default defineNuxtConfig({
   ssr: true,
 
   icon: {
-    serverBundle: 'remote',
+    clientBundle: {
+      scan: true, // Автоматически сканирует иконки
+      sizeLimitKb: 256
+    },
+    collections: ['lucide', ] // Добавь коллекцию line-md
   },
-
-
+  
   app: {
     head: {
       title: 'Школамото.рф', // default fallback title
