@@ -15,7 +15,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'dark', // Устанавливаем темную тему по умолчанию
     fallback: 'dark',   // Резервный вариант, если предпочтение не определено
-    classSuffix: ''     // Убираем суффикс для классов (опционально)
   },
   
   app: {
