@@ -11,7 +11,7 @@ defineProps<{
     :title="page.features.title"
     :description="page.features.description"
     :features="page.features.feature"
-    :ui="{ container: '!pt-10' }"
+    :ui="{ container: '!pt-10 !pb-4' }"
   />
 </template>
 

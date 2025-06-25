@@ -14,6 +14,7 @@ const { data: projects } = await useAsyncData('projects', () => {
       :title="page.title"
       :description="page.description"
       :ui="{
+        container: '!pt-0 !pb-10',
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
         links: 'justify-start'

@@ -32,7 +32,7 @@ function openModal(index) {
         <img
           :src="image"
           :alt="`Изображение ${index + 1}`"
-          class="object-cover w-full h-full"
+          class="object-cover w-full h-full rounded-lg"
         />
       </div>
     </div>

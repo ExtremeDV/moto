@@ -23,7 +23,9 @@ useSeoMeta({
   <UPage v-if="page">
     <UPageSection
       orientation="vertical"
-      reverse>
+      reverse
+      :ui="{ title: 'font-logo'}"
+      >
       <template #headline>
         <Motion
         :initial="{
@@ -41,7 +43,7 @@ useSeoMeta({
           delay: 0.1
         }"
       >
-      <img class="sm:max-w-1/2 max-w-full mx-auto" :src="page.image.src" :alt="page.image.alt">
+      <img class="sm:max-w-2/3 max-w-full mx-auto rounded-lg" :src="page.image.src" :alt="page.image.alt">
     </Motion>
       </template>
       <template #title>
@@ -94,3 +96,4 @@ useSeoMeta({
       </UPageBody>
   </UPage>
 </template>
+

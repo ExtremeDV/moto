@@ -6,7 +6,7 @@ defineProps<{
 }>()
 
 const { data: posts } = await useAsyncData('index-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').limit(3).all()
+  queryCollection('blog').order('date', 'DESC').limit(2).all()
 )
 if (!posts.value) {
   throw createError({ statusCode: 404, statusMessage: 'Нет постов для отображения', fatal: true })
@@ -19,7 +19,7 @@ if (!posts.value) {
     :description="page.blog.description"
     :ui="{
       container: 'px-0 !pt-0 sm:gap-6 lg:gap-8',
-      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
+      title: 'text-left font-medium',
       description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted'
     }"
   >
@@ -31,7 +31,7 @@ if (!posts.value) {
         v-for="(post, index) in posts"
         :key="index"
         orientation="horizontal"
-        variant="naked"
+        variant="maked"
         v-bind="post"
         :to="post.path"
         :ui="{
