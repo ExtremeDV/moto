@@ -9,11 +9,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
-
-  icon: {
-    serverBundle: 'remote',
-  },
-
+  
   app: {
     head: {
       title: 'Школамото.рф', // default fallback title
