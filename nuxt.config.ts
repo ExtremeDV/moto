@@ -9,15 +9,6 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
-
-  icon: {
-    clientBundle: {
-      scan: true, // Автоматически собирает используемые иконки
-      sizeLimitKb: 256 // Лимит размера бандла
-    },
-    serverBundle: false // Отключи серверный бандл
-  },
-
   app: {
     head: {
       title: 'Школамото.рф', // default fallback title
