@@ -23,6 +23,7 @@ useSeoMeta({
   <UPage v-if="page">
     <UPageHero
       orientation="horizontal"
+      reverse
       :title="page.title"
       :description="page.description">
       <img :src="page.image.src" :alt="page.image.alt">
