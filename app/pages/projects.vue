@@ -24,8 +24,9 @@ useSeoMeta({
     <UPageHero
       orientation="horizontal"
       :title="page.title"
-      :description="page.description"
-      :image="page.image"/>
+      :description="page.description">
+      <img :src="page.image.src" :alt="page.image.alt">
+    </UPageHero>
       <UPageBody>
         <ContentRenderer
             v-if="page.body"
