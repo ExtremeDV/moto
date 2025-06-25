@@ -141,7 +141,8 @@ export default defineContentConfig({
       source: 'services.md',
       schema: z.object({
         title: z.string(),
-        description: z.string()
+        description: z.string(),
+        images: z.array(createImageSchema())
         })
     })
   }
