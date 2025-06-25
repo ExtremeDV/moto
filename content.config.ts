@@ -142,7 +142,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string(),
-        images: z.array(createImageSchema())
+        image: createImageSchema(),
         })
     })
   }
