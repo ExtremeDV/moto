@@ -1,4 +1,8 @@
 export default defineAppConfig({
+  icon: {
+    mode: 'css',
+    cssLayer: 'base'
+  },
   global: {
     picture: {
       dark: '/images/fox.png',
