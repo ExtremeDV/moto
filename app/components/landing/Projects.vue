@@ -52,7 +52,7 @@ const { data: projects } = await useAsyncData('projects', () => {
           <img
             :src="project.image"
             :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg"
+            class="object-cover object-top w-full h-80 rounded-lg"
           >
         </UPageCard>
       </Motion>
