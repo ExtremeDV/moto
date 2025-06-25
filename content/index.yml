@@ -113,6 +113,12 @@ faq:
           content: Ответ
         - label: Вопрос 2
           content: Ответ
-futures:
-  - title: test 1
-    description: test 1
+features:
+  title: Вот часть из базовых умений мотоциклиста.
+  description: |
+    Вы научитесь:
+  feature:
+    - title: Индивидуальный подход
+      description: |
+        Мы заинтересованы , чтобы люди уезжали от нас с хорошим настроением и рекомендовали нас своим друзьям и знакомым.
+      icon: i-lucide-handshake

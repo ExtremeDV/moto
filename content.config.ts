@@ -74,9 +74,13 @@ export default defineContentConfig({
               )
             }))
         }),
-        features: z.array(createBaseSchema().extend({
-          icon: z.string().optional(),
-        }))
+        features: createBaseSchema().extend({
+          feature: z.array(
+            createBaseSchema().extend({
+              icon  : z.string().editor({ input: 'icon' })
+            })
+          )
+        })
       })
     }),
     projects: defineCollection({
