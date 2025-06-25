@@ -23,6 +23,7 @@
     "pnpm": "^10.12.3"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.52",
     "@nuxt/eslint": "^1.4.1",
     "eslint": "^9.27.0",
     "typescript": "^5.8.3",
