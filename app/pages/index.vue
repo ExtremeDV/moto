@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('index').first()
 })
@@ -33,5 +34,6 @@ useSeoMeta({
     <LandingProjects :page />
     <LandingFAQ :page />
     <Gallery />
+    <LandingFeatures :page />
   </UPage>
 </template>

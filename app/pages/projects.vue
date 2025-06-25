@@ -21,13 +21,71 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page">
-    <UPageHero
-      orientation="horizontal"
-      reverse
-      :title="page.title"
-      :description="page.description">
-      <img :src="page.image.src" :alt="page.image.alt">
-    </UPageHero>
+    <UPageSection
+      orientation="vertical"
+      reverse>
+      <template #headline>
+        <Motion
+        :initial="{
+          scale: 1.1,
+          opacity: 0,
+          filter: 'blur(20px)'
+        }"
+        :animate="{
+          scale: 1,
+          opacity: 1,
+          filter: 'blur(0px)'
+        }"
+        :transition="{
+          duration: 0.6,
+          delay: 0.1
+        }"
+      >
+      <img class="sm:max-w-1/2 max-w-full mx-auto" :src="page.image.src" :alt="page.image.alt">
+    </Motion>
+      </template>
+      <template #title>
+      <Motion
+        :initial="{
+          scale: 1.1,
+          opacity: 0,
+          filter: 'blur(20px)'
+        }"
+        :animate="{
+          scale: 1,
+          opacity: 1,
+          filter: 'blur(0px)'
+        }"
+        :transition="{
+          duration: 0.6,
+          delay: 0.1
+        }"
+      >
+        {{ page.title }}
+      </Motion>
+    </template>
+
+    <template #description>
+      <Motion
+        :initial="{
+          scale: 1.1,
+          opacity: 0,
+          filter: 'blur(20px)'
+        }"
+        :animate="{
+          scale: 1,
+          opacity: 1,
+          filter: 'blur(0px)'
+        }"
+        :transition="{
+          duration: 0.6,
+          delay: 0.3
+        }"
+      >
+        {{ page.description }}
+      </Motion>
+    </template>
+    </UPageSection>
       <UPageBody>
         <ContentRenderer
             v-if="page.body"

@@ -113,3 +113,6 @@ faq:
           content: Ответ
         - label: Вопрос 2
           content: Ответ
+futures:
+  - title: test 1
+    description: test 1

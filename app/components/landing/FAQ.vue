@@ -21,7 +21,7 @@ const ui = {
   root: 'flex items-center gap-4 w-full',
   list: 'relative flex bg-transparent dark:bg-transparent gap-2 px-0',
   indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-lg bg-elevated/60',
-  trigger: 'px-3 py-2 rounded-lg hover:bg-muted/50 data-[state=active]:text-highlighted data-[state=inactive]:text-muted',
+  trigger: 'px-3 py-2 rounded-lg hover:bg-muted/50 data-[state=active]:text-highlighted data-[state=active]:text-primary data-[state=inactive]:text-muted',
   label: 'truncate'
 }
 </script>
@@ -45,7 +45,7 @@ const ui = {
         <div class="my-4 text-sm sm:text-md lg:text-sm text-muted">
           {{ item.description }}
         </div>
-        <div class="my-2">
+        <div class="my-2 text-primary">
          Стоимость: {{ item.price ? `${item.price} руб.` : 'Бесплатно' }} 
         </div>
         <UPageAccordion
