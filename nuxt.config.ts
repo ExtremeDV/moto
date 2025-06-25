@@ -9,11 +9,15 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
-  icon: {
-    serverBundle: {
-      collections: ['lucide']
-    }
+
+  ssr: true,
+
+  colorMode: {
+    preference: 'dark', // Устанавливаем темную тему по умолчанию
+    fallback: 'dark',   // Резервный вариант, если предпочтение не определено
+    classSuffix: ''     // Убираем суффикс для классов (опционально)
   },
+  
   app: {
     head: {
       title: 'Школамото.рф', // default fallback title

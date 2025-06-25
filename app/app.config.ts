@@ -69,10 +69,6 @@ export default defineAppConfig({
       minus: 'i-lucide-minus',
       plus: 'i-lucide-plus',
       search: 'i-lucide-search'
-    },
-
-    colorMode: {
-      preference: 'dark'
     }
   },
 
