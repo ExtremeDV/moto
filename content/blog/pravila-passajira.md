@@ -1,6 +1,7 @@
 ---
 title: А что и мне надо правила знать? Я же пассажир, а не водитель.
-description: "- Да, если Вы пассажир, то для приятных и безопасных поездок Вы тоже должны соблюдать некоторые правила. Сейчас расскажем об основных из них."
+description: "- Да, если Вы пассажир, то для приятных и безопасных поездок Вы
+  тоже должны соблюдать некоторые правила. Сейчас расскажем об основных из них."
 date: 2025-06-08
 image: /images/blog/post_1.jpg
 minRead: 8
@@ -11,148 +12,18 @@ author:
     alt: Роман Лисов
 ---
 
-Creating successful digital products isn't about following a rigid formula—it's about developing a flexible framework that adapts to the unique challenges of each project. After refining my approach across dozens of products, I've developed a process that consistently delivers results while leaving room for creativity and iteration.
+## 1. Посадка и сход с мотоцикла
 
-In this article, I'll walk through my end-to-end design process, from initial discovery to developer handoff, using my recent work on the EcoTrack application as a case study.
+Если мотоцикл не высокий, то садиться можно с земли, если высокий, то с задних подножек. При посадке придержитесь за плечи водителя и перекиньте одну ногу через мотоцикл. Осторожно, не заденьте кофр (хозяева это очень не любят).При посадке и сходе с мотоцикла дождитесь сигнала водителя, разрешающего Вам совершить какое-либо действие. Обычно, водитель подает сигнал "можно" поднятием и опусканием плеч.
 
-## Phase 1: Discovery & Research
+## 2. Как держаться за водителя
 
-Every great product starts with understanding the problem it's trying to solve. For EcoTrack, our challenge was creating an engaging way for users to track their environmental impact without feeling overwhelmed by guilt or complex data.
+Прежде всего, держаться нужно ногами, сжимая своими бедрами бедра водителя. Руками вы придерживаетесь дополнительно.Поместите руки на талию водителя, держитесь удобным крепким хватом, но старайтесь не стеснять движения водителя. При наличии специальных ручек можно держаться и за них, но, на наш взгляд, держаться за водителя удобнее и надёжнее.
 
-### User Interviews
+## 3. Нестандартные ситуации
 
-I began by conducting interviews with 12 potential users across different demographics, focusing on their current habits and attitudes toward sustainability. These conversations revealed a crucial insight: most people wanted to make environmentally friendly choices but felt paralyzed by the complexity of calculating their impact.
+Если вы чувствуете занос/мотоцикл начинает падать, обнимите водителя и прижмитесь к нему, чтобы сохранить равновесие. Не делайте резких движений, так как это может усугубить ситуацию. Следуйте указаниям водителя и постарайтесь не паниковать.
 
-> "I care about the environment, but I have no idea if using a paper bag is actually better than plastic, or if my reusable water bottle makes any difference." — Interview participant
+## 4. Дополнительные советы:
 
-### Competitive Analysis
-
-Next, I analyzed existing sustainability apps, creating a feature comparison matrix to identify gaps and opportunities. Most competitors focused on carbon footprint calculations but failed to provide actionable guidance or positive reinforcement.
-
-### Defining Success
-
-Before opening Figma, I collaborated with stakeholders to define clear success metrics:
-
-- Increase daily active usage by 40%
-- Improve user-reported understanding of environmental impact
-- Drive measurable behavior changes in at least two sustainability categories
-
-## Phase 2: Ideation & Conceptualization
-
-With a solid understanding of the problem space, I moved into the creative phase of the process.
-
-### Sketching
-
-I always start with pen and paper, rapidly exploring different approaches without the constraints of digital tools. For EcoTrack, I filled three sketchbooks with concepts ranging from gamified experiences to data-heavy dashboards.
-
-### Information Architecture
-
-Based on research insights, I developed a user-centered information architecture that prioritized simplicity and actionable information:
-
-1. **Dashboard** — Personalized overview with immediate impact insights
-2. **Daily Tracker** — Simple logging of activities with immediate feedback
-3. **Impact Journey** — Visualization of progress over time
-4. **Action Center** — Customized recommendations based on user behavior
-
-### Design Principles
-
-I established four core design principles to guide all decisions:
-
-- **Simplify complexity** — Translate environmental impact into understandable units
-- **Celebrate progress** — Focus on positive reinforcement rather than guilt
-- **Enable informed choices** — Provide context for decision-making
-- **Design for habit formation** — Create satisfying interaction loops
-
-## Phase 3: Prototyping & Testing
-
-With the conceptual framework in place, I moved into the iterative cycle of prototyping and testing.
-
-### Low-Fidelity Wireframes
-
-I created wireframes focusing on user flows and information hierarchy, deliberately keeping the visual design minimal to focus feedback on functionality and structure.
-
-### User Testing (Round 1)
-
-Testing wireframes with 8 participants revealed several key insights:
-
-- Users wanted more immediate feedback when logging activities
-- The impact visualization wasn't intuitive for most users
-- People were confused by technical environmental terminology
-
-### Mid-Fidelity Prototypes
-
-Based on testing feedback, I refined the concept and developed interactive prototypes with more visual detail, focusing on:
-
-- Simplified data visualization using familiar metaphors
-- Immediate positive reinforcement for logged activities
-- Progressive disclosure of more complex environmental information
-
-### User Testing (Round 2)
-
-A second round of testing showed significant improvements in usability, but highlighted new challenges:
-
-- Users wanted to compare their impact with friends or community averages
-- Weekly summaries were more motivating than daily statistics
-- The onboarding process felt too lengthy
-
-## Phase 4: Visual Design & Refinement
-
-With the core experience validated, I moved into high-fidelity visual design.
-
-### Visual Language
-
-I developed a visual language that balanced approachability with credibility:
-
-- A nature-inspired color palette with clear functional color coding
-- Custom iconography that simplified complex concepts
-- Typography that prioritized readability across devices
-- Micro-interactions that provided satisfaction and reinforcement
-
-### Design System
-
-To ensure consistency and facilitate development, I created a comprehensive design system including:
-
-- Component library with documented states and behaviors
-- Responsive layout guidelines
-- Animation specifications
-- Accessibility standards
-
-### Final Prototype
-
-The final prototype brought together all elements into a cohesive experience, which we tested with a broader user group before moving to development.
-
-## Phase 5: Implementation & Iteration
-
-The design process doesn't end when development begins—it evolves.
-
-### Developer Collaboration
-
-I worked closely with developers throughout implementation, participating in code reviews and adjusting designs to address technical constraints while preserving the core experience.
-
-### Analytics Implementation
-
-We integrated analytics to track our success metrics, setting up dashboards to monitor key interactions and user journeys.
-
-### Post-Launch Iteration
-
-After launch, we established a regular cycle of analysis and iteration:
-
-- Weekly reviews of user feedback and behavior data
-- Bi-weekly design sprints to address emerging issues
-- Monthly feature planning based on usage patterns
-
-## Results & Learnings
-
-Six months after launch, EcoTrack has exceeded our initial success metrics:
-
-- 52% increase in daily active usage
-- 78% of users report better understanding of their environmental impact
-- Average user has adopted 3.4 new sustainable habits
-
-The most valuable lesson from this project was the importance of making abstract concepts tangible. By translating complex environmental data into personal, actionable insights, we created an experience that not only educated users but empowered them to make meaningful changes.
-
-## Conclusion
-
-Effective product design is never a linear journey—it's a continuous cycle of learning and refinement. By staying focused on user needs while maintaining a flexible approach to problem-solving, we can create products that not only meet business objectives but genuinely improve people's lives.
-
-I'd love to hear about your own design process and how you approach similar challenges. Feel free to reach out with questions or share your experiences in the comments below.
+\- Носите защитную одежду, включая шлем, перчатки и обувь ВСЕГДА.- Информируйте водителя о любых изменениях в своем состоянии или  дискомфорте.- Сообщайте водителю заранее оговоренным "знаком" о препятствиях или опасностях на дороге. Будьте с водителем "одним целым" - если он привстает при проезде через препятствия, то привставайте вместе с ним как бы "одной конструкцией", без резких движений, не создавая диссонанс.- Уважайте водителя и его решения, не отвлекайте его без повода.Соблюдение этих правил поможет обеспечить безопасность и комфорт как водителя, так и пассажира. Наслаждайтесь прекрасной совместной поездкой на мотоцикле!
