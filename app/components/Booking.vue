@@ -21,7 +21,7 @@ const description = "Оставьте заявку на обучение, и м�
     <DefineFormTemplate>
       <UForm :state="state" class="space-y-4 flex flex-col justify-center items-center">
         <UFormField label="Ваше имя" name="name" required>
-          <UInput v-model="state.name" placeholder="shadcn@example.com" required size="xl" class="w-full"/>
+          <UInput v-model="state.name" placeholder="Никита" required size="xl" class="w-full"/>
         </UFormField>
         <UFormField label="Номер телнфона" name="phone" required>
           <UInput v-model="state.phone" placeholder="89031234567" required size="xl" class="w-full"/>

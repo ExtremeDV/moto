@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Booking from '~/components/Booking.vue'
+
 
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('index').first()
@@ -33,6 +35,7 @@ useSeoMeta({
     <LandingBlog :page />
     <LandingProjects :page />
     <LandingFAQ :page />
+    <div class="mb-10 p-0"><Booking /></div>
     <Gallery />
     <LandingFeatures :page />
   </UPage>
