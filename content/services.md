@@ -25,6 +25,10 @@ alt: for man
 src: /images/gallery/49-e7838-f-be-97-4-a03-95-af-d28453-da-30-f2-1-201-a.jpeg
 ---
 ::
+#
+
+::Booking
+::
 
 ## [Полный курс]{.text-primary}
 
@@ -37,6 +41,10 @@ src: /images/gallery/49-e7838-f-be-97-4-a03-95-af-d28453-da-30-f2-1-201-a.jpeg
 alt: random image
 src: /images/gallery/photo-2025-06-23-16.57.23.jpeg
 ---
+::
+#
+
+::Booking
 ::
 
 ## [Разовое занятие]{.text-primary}
