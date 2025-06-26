@@ -86,7 +86,7 @@ export default defineAppConfig({
     colorMode: false,
     links: [{
       'icon': 'simple-icons:whatsapp',
-      'to': 'https:/wa.me/79262552512',
+      'to': 'https://wa.me/79262552512',
       'target': '_blank',
       'aria-label': 'WhatsApp'
     }, {
