@@ -82,28 +82,28 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `Copyright © 2013 - ${new Date().getFullYear()}`,
+    credits: `Школамото.рф © 2013 - ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
+      'icon': 'simple-icons:whatsapp',
+      'to': 'https:/wa.me/79262552512',
       'target': '_blank',
-      'aria-label': 'Nuxt Website'
+      'aria-label': 'WhatsApp'
     }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
+      'icon': 'simple-icons:youtube',
+      'to': 'https://www.youtube.com/channel/UC3UYzo4fmyeQVA5IYJo7jLw/videos',
       'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord'
+      'aria-label': 'Youtube'
     }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
+      'icon': 'simple-icons:instagram',
+      'to': 'https://www.instagram.com/shkolamoto/',
       'target': '_blank',
-      'aria-label': 'Nuxt on X'
+      'aria-label': 'Instagram'
     }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
+      'icon': 'simple-icons:vk',
+      'to': 'https://vk.com/shkolamoto_podolsk',
       'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
+      'aria-label': 'VK'
     }]
   }
 })
