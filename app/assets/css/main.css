@@ -10,6 +10,7 @@
 }
 
 :root {
+  font-size: clamp(16px, 1rem, 18px);
   --ui-container: var(--container-4xl);
   --ui-bg: var(--color-neutral-50);
   
