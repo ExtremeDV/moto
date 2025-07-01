@@ -36,7 +36,7 @@ defineProps<{
             target="_blank"
           >
           <div
-            class="inline-flex items-center gap-1"
+            class="inline-flex items-start gap-1"
             :style="{ color: experience.company.color }"
           >
             <span class="font-medium">{{ experience.company.name }}</span>
