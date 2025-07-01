@@ -26,10 +26,6 @@ defineProps<{
           :in-view-options="{ once: true }"
           class="text-muted flex items-center text-wrap gap-2"
         >
-          <!-- <p class="text-sm">
-            {{ experience.date }}
-          </p> -->
-          <!-- <USeparator /> -->
           <ULink
             class="flex items-center gap-1"
             :to="experience.company.url"

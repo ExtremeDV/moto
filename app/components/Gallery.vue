@@ -21,7 +21,7 @@ function openModal(index) {
 
 <template>
   <div>
-        <UModal v-model="isModalOpen" title="Фотогалерея" :ui="{ content: 'sm:max-w-[65%] max-w-none mx-auto' }">
+        <UModal fullscreen v-model="isModalOpen" title="Фотогалерея" :ui="{ content: 'sm:max-w-[95%] max-w-none mx-auto' }">
     <div class="grid grid-cols-3 gap-4">
       <div
         v-for="(image, index) in latestImages"
@@ -43,12 +43,12 @@ function openModal(index) {
           :startIndex="selectedIndex"
           arrows
           :loop="true"
-          :ui="{ root: 'sm:max-w-[65%] max-w-none mx-auto items-center p-0', arrows: 'hidden sm:block', container: 'items-center' }"
+          :ui="{ root: 'sm:max-w-[65%] max-w-none mx-auto items-center p-0', arrows: 'hidden sm:block', container: '!p-0 items-center' }"
           >
           <img
             :src="item"
             alt="Изображение"
-            class="max-h-[75vh] mx-auto"
+            class="max-h-[80vh] mx-auto"
           />
         </UCarousel>
       </template>
