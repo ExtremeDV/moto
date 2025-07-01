@@ -9,9 +9,8 @@
   --font-logo: 'Alegreya Sans', sans-serif;
 }
 
-:root {
-  font-size: clamp(16px, 1rem, 18px);
-  text-size-adjust: 100%;
+:root, html {
+  font-size: 16px !important;
   --ui-container: var(--container-4xl);
   --ui-bg: var(--color-neutral-50);
   
