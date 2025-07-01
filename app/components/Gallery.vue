@@ -21,7 +21,7 @@ function openModal(index) {
 
 <template>
   <div>
-        <UModal fullscreen v-model="isModalOpen" title="Фотогалерея" :ui="{ content: 'sm:max-w-[95%] max-w-none mx-auto' }">
+        <UModal fullscreen v-model="isModalOpen" :ui="{ header: 'min-h-10 gap-1', content: 'sm:max-w-[95%] max-w-none mx-auto' }">
     <div class="grid grid-cols-3 gap-4">
       <div
         v-for="(image, index) in latestImages"
@@ -36,6 +36,9 @@ function openModal(index) {
         />
       </div>
     </div>
+    <template #title>
+      Фотогалерея
+    </template>
       <template #body>
         <UCarousel
           v-slot="{ item }"
