@@ -42,7 +42,7 @@ defineProps<{
             <span class="font-medium">{{ experience.company.name }}</span>
             <UIcon :name="experience.company.logo" />
           </div>
-            <span class="text-sm">
+            <span class="text-sm text-left">
               {{ experience.position }}
             </span>
           </ULink>
