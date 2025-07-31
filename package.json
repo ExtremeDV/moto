@@ -19,6 +19,7 @@
     "@vueuse/nuxt": "^13.2.0",
     "better-sqlite3": "^12.1.1",
     "motion-v": "^1.1.1",
+    "nodemailer": "^7.0.5",
     "nuxt": "^3.17.4",
     "nuxt-og-image": "^5.1.4",
     "pnpm": "^10.12.3"

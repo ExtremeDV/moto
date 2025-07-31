@@ -9,28 +9,31 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
-
-  ssr: true,
-
-  colorMode: {
-    preference: 'dark', // Устанавливаем темную тему по умолчанию
-    fallback: 'dark',   // Резервный вариант, если предпочтение не определено
+  devtools: {
+    enabled: true
   },
-  
   app: {
     head: {
       title: 'Школамото.рф', // default fallback title
       htmlAttrs: {
-        lang: 'ru',
+        lang: 'ru'
       }
     }
   },
-  
-  devtools: {
-    enabled: true
-  },
 
   css: ['~/assets/css/main.css'],
+
+  colorMode: {
+    preference: 'dark', // default value of $colorMode.preference
+    fallback: 'dark', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'localStorage', // or 'sessionStorage' or 'cookie'
+    storageKey: 'nuxt-color-mode'
+  },
 
   future: {
     compatibilityVersion: 4
@@ -54,5 +57,5 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
-  }
+  },
 })

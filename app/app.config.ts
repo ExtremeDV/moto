@@ -17,6 +17,7 @@ export default defineAppConfig({
       color: 'primary'
     }
   },
+  
   toaster: {
     position: 'top-right' as const,
     expand: true,

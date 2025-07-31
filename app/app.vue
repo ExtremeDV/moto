@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ru } from '@nuxt/ui-pro/locale'
+import { ru } from '@nuxt/ui-pro/locale'
 
 const colorMode = useColorMode()
 
