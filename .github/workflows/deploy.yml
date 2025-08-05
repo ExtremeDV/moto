@@ -33,7 +33,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ secrets.REPO_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            docker pull ghcr.io/${{ github.repository }}:latest
-            docker ${{ github.repository }} || true
-            docker ${{ github.repository }} || true
-            docker run -d --name ${{ github.repository }} -p 3000:3000 ghcr.io/${{ github.repository }}:latest
+            docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
+            docker ${{ secrets.REPO_NAME }} || true
+            docker ${{ secrets.REPO_NAME }} || true
+            docker run -d --name ${{ secrets.TITLE }} -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
