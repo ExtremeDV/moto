@@ -9,6 +9,15 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
+  runtimeConfig: {
+    // Приватные переменные (доступны только на сервере)
+    emailUser: process.env.EMAIL_USER,
+    emailPass: process.env.EMAIL_PASS,
+    emailHost: process.env.EMAIL_HOST,
+    emailPort: process.env.EMAIL_PORT,
+    emailTo: process.env.EMAIL_TO,
+    emailFrom: process.env.EMAIL_FROM,
+  },
   devtools: {
     enabled: true
   },

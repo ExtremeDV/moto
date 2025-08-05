@@ -46,7 +46,9 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
 </script>
 
 <template>
-  <UApp :locale="ru">
+  <UApp
+  :locale="ru"
+  :toaster="{ position: 'top-center', duration: 3000 }">
     <NuxtLayout>
       <UMain class="relative">
         <NuxtPage />
