@@ -8,7 +8,7 @@ RUN pnpm add -D tailwindcss
 COPY . .
 # Увеличиваем лимит памяти
 ENV NODE_OPTIONS="--max-old-space-size=4096"
-RUN npm run build
+RUN pnpm build
 RUN ls -la /app/.output || echo ".output не создана"
 
 # Этап 2: Финальный образ
