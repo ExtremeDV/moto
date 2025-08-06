@@ -45,7 +45,13 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            echo "NUXT_EMAIL_USER=${{ secrets.NNUXT_EMAIL_USER }}" > secrets.env
+            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}" >> secrets.env
+            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}" >> secrets.env
+            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}" >> secrets.env
+            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}" >> secrets.env
+            echo "NUXT_EMAIL_FROM=${{ secrets.NUXT_EMAIL_FROM }}" >> secrets.env
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
-            docker ${{ secrets.REPO_NAME }} || true
-            docker ${{ secrets.REPO_NAME }} || true
+            docker stop ${{ secrets.TITLE }} || true
+            docker rm ${{ secrets.TITLE }} || true
             docker run -d --name ${{ secrets.TITLE }} -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest

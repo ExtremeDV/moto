@@ -6,7 +6,6 @@
 .cache
 dist
 .pnpm-store
-Dockerfile
 
 # Node dependencies
 node_modules
