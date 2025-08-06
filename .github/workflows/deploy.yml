@@ -36,6 +36,8 @@ jobs:
           tags: ghcr.io/${{ secrets.REPO_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            NUXT_UI_PRO_LICENSE=${{ secrets.NUXT_UI_PRO_LICENSE }}
         env:
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
