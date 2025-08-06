@@ -5,7 +5,7 @@ WORKDIR /app
 COPY dev/package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm install
 RUN pnpm add -D tailwindcss
-COPY dev .
+COPY . .
 # Увеличиваем лимит памяти
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN pnpm build
