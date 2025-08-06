@@ -2,7 +2,7 @@
 FROM node:22-slim AS builder
 
 WORKDIR /app
-COPY dev/package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm install
 RUN pnpm add -D tailwindcss
 COPY . .
