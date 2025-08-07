@@ -53,87 +53,6 @@ jobs:
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             echo "Docker login status: $?"
 
-             # Создаём директории для Certbot
-            mkdir -p /root/Projects/certbot/www /root/Projects/certbot/conf
-
-            # Проверяем и обновляем nginx.conf
-            NGINX_CONF="/root/Projects/nginx.conf"
-            DOMAIN="${{ secrets.DOMAIN_NAME }}"
-            if ! grep -q "server_name.*$DOMAIN" "$NGINX_CONF"; then
-              echo "Adding $DOMAIN to nginx.conf"
-              cat << 'EOF' >> "$NGINX_CONF"
-            
-            server {
-                listen 80;
-                server_name $DOMAIN;
-
-                location /.well-known/acme-challenge/ {
-                    root /var/www/certbot;
-                }
-
-                location / {
-                    proxy_pass http://${{ secrets.TITLE }}:3000;
-                    proxy_set_header Host \$host;
-                    proxy_set_header X-Real-IP \$remote_addr;
-                    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-                    proxy_set_header X-Forwarded-Proto \$scheme;
-                }
-            }
-            EOF
-            fi
-
-            # Перезапускаем Nginx для проверки HTTP
-            docker stop nginx || true
-            docker rm nginx || true
-            docker run -d --name nginx --network app-network \
-              -p 80:80 \
-              -v /root/Projects/nginx.conf:/etc/nginx/nginx.conf:ro \
-              -v /root/Projects/certbot/www:/var/www/certbot \
-              nginx:alpine
-            echo "Nginx HTTP restart status: $?"
-
-            # Проверяем сертификат
-            CERT_PATH="/root/Projects/certbot/conf/live/$DOMAIN"
-            if [ ! -f "$CERT_PATH/fullchain.pem" ]; then
-              echo "No certificate found for $DOMAIN, issuing new one"
-              docker run --rm --name certbot \
-                -v /root/Projects/certbot/conf:/etc/letsencrypt \
-                -v /root/Projects/certbot/www:/var/www/certbot \
-                certbot/certbot certonly \
-                --webroot -w /var/www/certbot \
-                -d "$DOMAIN" \
-                --email "${{ secrets.CERTBOT_EMAIL }}" \
-                --agree-tos --no-eff-email \
-                --force-renewal
-              echo "Certbot status: $?"
-            else
-              echo "Certificate for $DOMAIN already exists"
-            fi
-
-            # Обновляем nginx.conf для HTTPS
-            if ! grep -q "listen 443 ssl.*$DOMAIN" "$NGINX_CONF"; then
-              echo "Adding HTTPS configuration for $DOMAIN"
-              sed -i "/server_name $DOMAIN;/a \
-                \    listen 443 ssl;\n\
-                \    ssl_certificate /etc/nginx/ssl/$DOMAIN/fullchain.pem;\n\
-                \    ssl_certificate_key /etc/nginx/ssl/$DOMAIN/privkey.pem;" "$NGINX_CONF"
-              sed -i "/server_name $DOMAIN;/a \
-                \    location / {\n\
-                \        return 301 https://\$host\$request_uri;\n\
-                \    }" "$NGINX_CONF"
-            fi
-
-            # Перезапускаем Nginx с HTTPS
-            docker stop nginx || true
-            docker rm nginx || true
-            docker run -d --name nginx --network app-network \
-              -p 80:80 -p 443:443 \
-              -v /root/Projects/nginx.conf:/etc/nginx/nginx.conf:ro \
-              -v /root/Projects/certbot/conf:/etc/nginx/ssl:ro \
-              -v /root/Projects/certbot/www:/var/www/certbot \
-              nginx:alpine
-            echo "Nginx HTTPS restart status: $?"
-
             # Обновляем secrets.env
             echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}"
             echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}"
@@ -146,4 +65,3 @@ jobs:
             docker rm ${{ secrets.TITLE }} || true
             docker run -d --name ${{ secrets.TITLE }} --network projects_apps -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
             echo "Docker run status: $?"
-            
