@@ -65,4 +65,4 @@ jobs:
             docker rm ${{ secrets.TITLE }} || true
             docker run -d --name ${{ secrets.TITLE }} --network projects_apps ghcr.io/${{ secrets.REPO_NAME }}:latest
             echo "Docker run status: $?"
-            # Versiion 1.0.0
+            # Versiion 1.0.1
