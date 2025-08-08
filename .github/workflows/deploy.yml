@@ -54,12 +54,12 @@ jobs:
             echo "Docker login status: $?"
 
             # Обновляем secrets.env
-            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}" > /root/Projects/${{ secrets.TITLE }}/secrets.env
-            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}" >> /root/Projects/${{ secrets.TITLE }}/secrets.env
-            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}" >> /root/Projects/${{ secrets.TITLE }}/secrets.env
-            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}" >> /root/Projects/${{ secrets.TITLE }}/secrets.env
-            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}" >> /root/Projects/${{ secrets.TITLE }}/secrets.env
-            echo "NUXT_EMAIL_FROM=${{ secrets.NUXT_EMAIL_FROM }}" >> /root/Projects/${{ secrets.TITLE }}/secrets.env
+            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}" > ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_FROM=${{ secrets.NUXT_EMAIL_FROM }}" >> ${{ secrets.TITLE }}.env
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
             docker stop ${{ secrets.TITLE }} || true
             docker rm ${{ secrets.TITLE }} || true
