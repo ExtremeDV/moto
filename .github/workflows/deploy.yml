@@ -63,6 +63,6 @@ jobs:
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
             docker stop ${{ secrets.TITLE }} || true
             docker rm ${{ secrets.TITLE }} || true
-            docker run -d --name ${{ secrets.TITLE }} --network projects_apps ghcr.io/${{ secrets.REPO_NAME }}:latest
+            docker run -d --name ${{ secrets.TITLE }} --network projects_apps --env-file ${{ secrets.TITLE }}.env ghcr.io/${{ secrets.REPO_NAME }}:latest
             echo "Docker run status: $?"
             # Versiion 1.0.1
