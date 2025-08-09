@@ -10,7 +10,7 @@ export default defineAppConfig({
     available: true,
     address_class: 'г. Подольск, ул. Литейная, д. 34/2',
     address_area: 'г. Подольск, мкр. Кутузово, ул. Станционная, д. 21 (площадка ГАИ)',
-    phone: '8(926)255-25-12',
+    phone: '+7 (926) 255-25-12',
     booking: {
       label: 'Записаться на обучение',
       to: '/',
@@ -90,12 +90,14 @@ export default defineAppConfig({
       'to': 'https://www.youtube.com/channel/UC3UYzo4fmyeQVA5IYJo7jLw/videos',
       'target': '_blank',
       'aria-label': 'Youtube'
-    }, {
-      'icon': 'simple-icons:instagram',
-      'to': 'https://www.instagram.com/shkolamoto/',
-      'target': '_blank',
-      'aria-label': 'Instagram'
-    }, {
+    },
+    //         {
+    //   'icon': 'simple-icons:instagram',
+    //   'to': 'https://www.instagram.com/shkolamoto/',
+    //   'target': '_blank',
+    //   'aria-label': 'Instagram'
+    // }, 
+            {
       'icon': 'simple-icons:vk',
       'to': 'https://vk.com/shkolamoto_podolsk',
       'target': '_blank',
