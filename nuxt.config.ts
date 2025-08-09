@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    '@nuxthq/studio',
   ],
 
   runtimeConfig: {
@@ -32,13 +31,6 @@ export default defineNuxtConfig({
     }
   },
 
-  studio: {
-    gitInfo: {
-      name: 'moto',  // Например, 'my-nuxt-project'
-      owner: 'extremedv',  // Например, 'yourusername'
-      url: 'https://github.com/ExtremeDV/moto'  // Например, 'https://github.com/yourusername/my-nuxt-project'
-    }
-  },
 
   css: ['~/assets/css/main.css'],
 
