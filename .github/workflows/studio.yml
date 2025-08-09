@@ -1,0 +1,86 @@
+
+name: studio-nuxt-build
+run-name: studio nuxt build
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - 'main'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Add write workflow permissions
+permissions:
+  contents: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Build job
+  build-and-deploy:
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: .
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Identify package manager
+        id: pkgman
+        run: |
+          cache=`[ -f "./pnpm-lock.yaml" ] && echo "pnpm" || ([ -f "./package-lock.json" ] && echo "npm" || ([ -f "./yarn.lock" ] && echo "yarn" || echo ""))`
+          package_manager=`[ ! -z "$cache" ] && echo "$cache" || echo "npm"`
+          echo "cache=$cache" >> $GITHUB_OUTPUT
+          echo "package_manager=$package_manager" >> $GITHUB_OUTPUT
+
+      - uses: pnpm/action-setup@v4
+        if: ${{ steps.pkgman.outputs.package_manager == 'pnpm' }}
+        name: Install pnpm
+        id: pnpm-install
+
+      - uses: actions/setup-node@v4
+        with:
+          version: ${{ matrix.node }}
+          cache: ${{ steps.pkgman.outputs.cache }}
+
+      - name: Install dependencies
+        run: ${{ steps.pkgman.outputs.package_manager }} install
+
+      - name: Generate
+        run: ${{ steps.pkgman.outputs.package_manager }} run build
+        env:
+          NITRO_PRESET: github_pages
+          NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
+          CERTBOT_EMAIL: ${{ secrets.CERTBOT_EMAIL }}
+DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
+GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+NUXT_EMAIL_FROM: ${{ secrets.NUXT_EMAIL_FROM }}
+NUXT_EMAIL_HOST: ${{ secrets.NUXT_EMAIL_HOST }}
+NUXT_EMAIL_PASS: ${{ secrets.NUXT_EMAIL_PASS }}
+NUXT_EMAIL_PORT: ${{ secrets.NUXT_EMAIL_PORT }}
+NUXT_EMAIL_TO: ${{ secrets.NUXT_EMAIL_TO }}
+NUXT_EMAIL_USER: ${{ secrets.NUXT_EMAIL_USER }}
+NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+REPO_NAME: ${{ secrets.REPO_NAME }}
+TITLE: ${{ secrets.TITLE }}
+VPS_HOST: ${{ secrets.VPS_HOST }}
+VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+
+      # Deployment job
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./.output/public
