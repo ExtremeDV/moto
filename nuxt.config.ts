@@ -7,8 +7,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxthq/studio'
   ],
+
   runtimeConfig: {
     // Приватные переменные (доступны только на сервере)
     emailUser: process.env.EMAIL_USER,
@@ -27,6 +29,14 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ru'
       }
+    }
+  },
+
+  studio: {
+    gitInfo: {
+      name: 'moto',  // Например, 'my-nuxt-project'
+      owner: 'extremedv',  // Например, 'yourusername'
+      url: 'https://github.com/ExtremeDV/moto'  // Например, 'https://github.com/yourusername/my-nuxt-project'
     }
   },
 
