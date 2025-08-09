@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { createReusableTemplate, useMediaQuery } from '@vueuse/core'
   import { z } from 'zod'
+  import { vMaska } from 'maska/vue'
 
   const [DefineFormTemplate, ReuseFormTemplate] = createReusableTemplate()
   const isDesktop = useMediaQuery('(min-width: 768px)')
@@ -11,7 +12,7 @@
   // Схема валидации с помощью Zod
   const formSchema = z.object({
     name: z.string().min(2, 'Имя должно содержать минимум 2 символа'),
-    phone: z.string().regex(/^\+?\d{10,15}$/, 'Введите корректный номер телефона')
+    phone: z.string().regex(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Введите корректный номер телефона')
   })
 
   const state = reactive({
@@ -79,7 +80,7 @@
   <div class="flex flex-col items-center justify-center">
     <DefineFormTemplate>
       <UForm 
-        :state="state" 
+        :state="state"
         :schema="formSchema"
         @submit="submitForm"
         class="space-y-4 flex flex-col justify-center items-center"
@@ -88,7 +89,7 @@
           <UInput v-model="state.name" placeholder="Никита" required size="xl" class="w-full" />
         </UFormField>
         <UFormField label="Номер телефона" name="phone" required>
-          <UInput v-model="state.phone" placeholder="+79031234567" required size="xl" class="w-full" />
+          <UInput v-maska="`+7 (###) ###-##-##`" v-model="state.phone" placeholder="+7 (903) 123-45-67" required size="xl" class="w-full" />
         </UFormField>
         <UButton size="xl" label="Отправить заявку" type="submit" />
       </UForm>
