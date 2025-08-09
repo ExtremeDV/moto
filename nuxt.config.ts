@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
   ],
 
   runtimeConfig: {
