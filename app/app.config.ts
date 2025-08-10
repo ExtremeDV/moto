@@ -10,7 +10,7 @@ export default defineAppConfig({
     available: true,
     address_class: 'г. Подольск, ул. Литейная, д. 34/2',
     address_area: 'г. Подольск, мкр. Кутузово, ул. Станционная, д. 21 (площадка ГАИ)',
-    phone: '+7 (926) 255-25-12',
+    phone: '+7(926)255-25-12',
     booking: {
       label: 'Записаться на обучение',
       to: '/',
