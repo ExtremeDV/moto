@@ -107,6 +107,6 @@ export default defineAppConfig({
   },
 
   seo: {
-    siteName: 'Школамото.рф - Мотошкола в Подольске'
+    siteName: 'Школамото.рф - Мотошкола в Подольске '
   }
 })
