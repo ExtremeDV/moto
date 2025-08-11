@@ -77,6 +77,7 @@ export default defineAppConfig({
       }
     }
   },
+
   footer: {
     credits: `Школамото.рф © 2013 - ${new Date().getFullYear()}`,
     colorMode: false,
@@ -103,5 +104,9 @@ export default defineAppConfig({
       'target': '_blank',
       'aria-label': 'VK'
     }]
+  },
+
+  seo: {
+    siteName: 'Школамото.рф - Мотошкола в Подольске'
   }
 })
